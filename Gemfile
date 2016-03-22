@@ -33,7 +33,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 group :production do
   # postgress
   gem 'pg'
-  group :development, :test do
+end  
+group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
   # Use sqlite3 as the database for Active Record

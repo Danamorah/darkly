@@ -3,6 +3,10 @@ Rails.application.routes.draw do
 
   get 'pags/pag2'
 
+  get 'pags/pag3'
+
+  post 'pags/save_user'
+
   root 'pags#pag1'
 
   # The priority is based upon order of creation: first created -> highest priority.

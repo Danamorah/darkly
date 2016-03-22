@@ -3,9 +3,10 @@
 <head>
 	<title>Darkly</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js">
 	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+	<%= stylesheet_link_tag    'darkly', media: 'all', 'data-turbolinks-track' => true %>
 	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js">
 	<%= csrf_meta_tags %>
 </head>
 <body>
@@ -25,11 +26,21 @@
 				<ul class="nav navbar-nav">
 					<li><%= link_to 'pag1', pags_pag1_path %></li>
 					<li><%= link_to 'pag2', pags_pag2_path %></li>
+					<li><%= link_to 'pag3', pags_pag3_path %></li>
 				</ul>
 			</div>
 		</div>
 	</nav>
-	<%= yield %>
+	<div class="container">
+		<ul>
+			<% @user.each do |user| %>
+			<li><%= user %></li>
+			<% end %>
+		</ul>
+		
+		<%= yield %>
+	</div>
+	
 
 </body>
 </html>
